@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Poll Page</title>
+</head>
+<body>
+    <h1>{{ page_title }}</h1>
+    <h2>Popular Polls</h2>
+    <ul>
+        {% for poll in poll_list %}
+            <li>{{poll.id}} {{poll.title}} <a href="{% url 'detail' poll_id=poll.id %}">vote</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>s
