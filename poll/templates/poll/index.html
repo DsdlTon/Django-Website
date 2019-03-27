@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +7,7 @@
 </head>
 <body>
     <h1>{{ page_title }}</h1>
+{#    <img src="{% static 'poll/images/uncle.jpg' %}">#}
     <h2>Popular Polls</h2>
     <ul>
         {% for poll in poll_list %}
@@ -13,4 +15,4 @@
         {% endfor %}
     </ul>
 </body>
-</html>s
+</html>
